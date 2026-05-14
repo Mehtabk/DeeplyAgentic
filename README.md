@@ -6,11 +6,23 @@
 
 ---
 
+## Get Started
+
+```bash
+git clone https://github.com/Mehtabk/DeeplyAgentic.git
+cd DeeplyAgentic/quickstart
+pip install -r requirements.txt
+python multi_agent_pipeline.py
+```
+
+---
+
 ## Projects
 
 | Project | Description |
 |---------|-------------|
-| [**The Agentic Stack**](./the-agentic-stack/) | A curated guide to building production-grade AI agent systems — organized by architecture layer (Orchestration → Agents → Tools → Guardrails). |
+| [**Quickstart**](./quickstart/) | Run a multi-agent pipeline (Planner → Executor → Validator) in 5 minutes. |
+| [**The Agentic Stack**](./the-agentic-stack/) | A curated guide to building production-grade AI agent systems — organized by architecture layer. |
 | [**Agent Prompts**](./agent-prompts/) | Production-ready system prompts for AI agents — Planner, Executor, Validator, Orchestrator, and Summarizer. |
 | [**Reading List**](./reading-list/) | Curated papers, reports, talks, and courses on agentic AI. Updated weekly. |
 
