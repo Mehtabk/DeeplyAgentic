@@ -9,14 +9,22 @@ The simplest way to run a Planner → Executor → Validator pipeline.
 ### Setup
 
 ```bash
+# Install uv (if you don't have it)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Run
 cd quickstart
-pip install .
 export OPENAI_API_KEY=your-key-here
+uv run multi_agent_pipeline.py
 ```
 
-### Run
+That's it. `uv run` handles dependency resolution automatically from `pyproject.toml`.
+
+### Alternative (pip)
 
 ```bash
+cd quickstart
+pip install .
 python multi_agent_pipeline.py
 ```
 
