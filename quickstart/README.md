@@ -9,7 +9,8 @@ The simplest way to run a Planner → Executor → Validator pipeline.
 ### Setup
 
 ```bash
-pip install openai-agents
+cd quickstart
+pip install .
 export OPENAI_API_KEY=your-key-here
 ```
 
