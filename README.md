@@ -1,8 +1,13 @@
-# DeeplyAgentic
+<p align="center">
+  <img src="./assets/logo.jpeg" alt="DeeplyAgentic" width="200"/>
+</p>
 
-> Building smart, scalable AI agent systems that do the heavy lifting.
+<h1 align="center">DeeplyAgentic</h1>
 
-🚀 **Harness AI. Reclaim Time. Amplify Impact.**
+<p align="center">
+  Building smart, scalable AI agent systems that do the heavy lifting.<br/>
+  🚀 <strong>Harness AI. Reclaim Time. Amplify Impact.</strong>
+</p>
 
 ---
 
@@ -11,8 +16,7 @@
 ```bash
 git clone https://github.com/Mehtabk/DeeplyAgentic.git
 cd DeeplyAgentic/quickstart
-pip install -r requirements.txt
-python multi_agent_pipeline.py
+uv run multi_agent_pipeline.py
 ```
 
 ---
