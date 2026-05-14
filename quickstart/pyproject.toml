@@ -1,0 +1,18 @@
+[project]
+name = "deeplyagentic-quickstart"
+version = "0.1.0"
+description = "Multi-agent pipeline quickstart — DeeplyAgentic"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "DeeplyAgentic", email = "hello@deeplyagentic.com" }
+]
+
+dependencies = [
+    "openai-agents>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Mehtabk/DeeplyAgentic"
+LinkedIn = "https://www.linkedin.com/company/deeplyagentic"
