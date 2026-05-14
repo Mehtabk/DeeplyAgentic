@@ -14,22 +14,16 @@
             line-height: 1.6;
         }
         .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
-        
-        /* Header */
         header { text-align: center; padding: 4rem 0 3rem; }
         header img { width: 120px; margin-bottom: 1.5rem; }
         header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
         header h1 span { font-weight: 300; }
         header p { color: #94a3b8; font-size: 1.1rem; margin-bottom: 0.5rem; }
         .tagline { color: #8b5cf6; font-weight: 600; }
-        
-        /* Stats */
         .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 3rem 0; }
         .stat { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.5rem; text-align: center; }
         .stat-number { font-size: 2rem; font-weight: 700; color: #8b5cf6; }
         .stat-label { font-size: 0.85rem; color: #64748b; margin-top: 0.25rem; }
-        
-        /* Architecture */
         .architecture { background: rgba(255,255,255,0.02); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; padding: 2rem; margin: 3rem 0; }
         .architecture h2 { text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem; }
         .layer { border: 1px solid; border-radius: 10px; padding: 1rem 1.5rem; margin-bottom: 0.75rem; }
@@ -39,60 +33,27 @@
         .layer-guardrails { border-color: #f59e0b; }
         .layer-name { font-weight: 600; font-size: 1.1rem; }
         .layer-desc { color: #94a3b8; font-size: 0.9rem; }
-        
-        /* Projects */
         .projects { margin: 3rem 0; }
         .projects h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
         .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-        .project-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-decoration: none;
-            color: inherit;
-            transition: border-color 0.2s;
-        }
+        .project-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.5rem; text-decoration: none; color: inherit; transition: border-color 0.2s; }
         .project-card:hover { border-color: #8b5cf6; }
         .project-card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: white; }
         .project-card p { font-size: 0.85rem; color: #94a3b8; }
-        
-        /* CTA */
         .cta { text-align: center; margin: 4rem 0 2rem; }
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 2rem;
-            background: #8b5cf6;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            margin: 0.5rem;
-            transition: background 0.2s;
-        }
+        .btn { display: inline-block; padding: 0.75rem 2rem; background: #8b5cf6; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 0.5rem; transition: background 0.2s; }
         .btn:hover { background: #7c3aed; }
-        .btn-outline {
-            background: transparent;
-            border: 1px solid #8b5cf6;
-            color: #8b5cf6;
-        }
+        .btn-outline { background: transparent; border: 1px solid #8b5cf6; color: #8b5cf6; }
         .btn-outline:hover { background: rgba(139,92,246,0.1); }
-        
-        /* Footer */
         footer { text-align: center; padding: 3rem 0; color: #64748b; font-size: 0.85rem; }
         footer a { color: #8b5cf6; text-decoration: none; }
-        
-        @media (max-width: 600px) {
-            .stats { grid-template-columns: 1fr; }
-            .project-grid { grid-template-columns: 1fr; }
-            header h1 { font-size: 1.8rem; }
-        }
+        @media (max-width: 600px) { .stats { grid-template-columns: 1fr; } .project-grid { grid-template-columns: 1fr; } header h1 { font-size: 1.8rem; } }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="./assets/deeplyagentic_logo.jpeg" alt="DeeplyAgentic">
+            <img src="https://raw.githubusercontent.com/Mehtabk/DeeplyAgentic/main/assets/deeplyagentic_logo.jpeg" alt="DeeplyAgentic">
             <h1><strong>Deeply</strong><span>Agentic</span></h1>
             <p>Building smart, scalable AI agent systems that do the heavy lifting.</p>
             <p class="tagline">🚀 Harness AI. Reclaim Time. Amplify Impact.</p>
