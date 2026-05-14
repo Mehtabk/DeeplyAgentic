@@ -40,7 +40,6 @@
             overflow-x: hidden;
         }
 
-        /* Background effects */
         .glow {
             position: fixed;
             top: -40%;
@@ -64,7 +63,6 @@
 
         .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
 
-        /* Nav */
         nav {
             display: flex;
             justify-content: space-between;
@@ -79,7 +77,6 @@
         .nav-links a:hover { color: var(--text); }
         .nav-btn { background: var(--purple); color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 500; }
 
-        /* Hero */
         .hero { text-align: center; padding: 8rem 0 4rem; }
         .hero-badge {
             display: inline-block;
@@ -123,7 +120,6 @@
             font-style: italic;
         }
 
-        /* Terminal */
         .terminal {
             display: inline-block;
             background: var(--surface);
@@ -152,7 +148,6 @@
         .terminal-body .prompt { color: var(--text-dim); }
         .terminal-body .cmd { color: var(--green); }
 
-        /* Buttons */
         .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         .btn {
             display: inline-flex;
@@ -170,7 +165,6 @@
         .btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
         .btn-secondary:hover { border-color: var(--purple); }
 
-        /* Scroll animations */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -194,7 +188,6 @@
             margin-bottom: 3rem;
         }
 
-        /* Architecture */
         .arch-stack { display: flex; flex-direction: column; gap: 0.5rem; }
         .arch-layer {
             display: flex;
@@ -211,7 +204,6 @@
         .arch-layer .name { font-weight: 600; font-size: 1rem; }
         .arch-layer .desc { color: var(--text-dim); font-size: 0.85rem; }
 
-        /* Project grid */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -230,7 +222,6 @@
         .project-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text); }
         .project-card p { font-size: 0.8rem; color: var(--text-dim); }
 
-        /* Stats */
         .stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -245,7 +236,6 @@
         .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--purple); }
         .stat-label { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.25rem; }
 
-        /* CTA Section */
         .cta-section {
             text-align: center;
             padding: 4rem 2rem;
@@ -257,14 +247,14 @@
         .cta-section h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
         .cta-section p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1rem; }
 
-        /* Built by */
         .built-by {
             text-align: center;
             padding: 3rem 0;
         }
         .built-by p { color: var(--text-dim); font-size: 0.9rem; }
+        .built-by a { color: var(--purple); text-decoration: none; font-weight: 600; }
+        .built-by a:hover { text-decoration: underline; }
 
-        /* Footer */
         footer {
             border-top: 1px solid var(--border);
             padding: 3rem 0;
@@ -422,7 +412,7 @@
         </section>
 
         <div class="built-by fade-in">
-            <p>Built by Mehtab Kayani</p>
+            <p>Built by <a href="https://www.linkedin.com/in/mehtabkayani/">Mehtab Kayani</a></p>
         </div>
 
         <footer>
