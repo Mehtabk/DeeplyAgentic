@@ -16,3 +16,9 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/Mehtabk/DeeplyAgentic"
 LinkedIn = "https://www.linkedin.com/company/deeplyagentic"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
