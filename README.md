@@ -22,11 +22,13 @@ python multi_agent_pipeline.py
 | Project | Description |
 |---------|-------------|
 | [**Quickstart**](./quickstart/) | Run a multi-agent pipeline (Planner → Executor → Validator) in 5 minutes. |
-| [**The Agentic Stack**](./the-agentic-stack/) | A curated guide to building production-grade AI agent systems — organized by architecture layer. |
-| [**Agent Prompts**](./agent-prompts/) | Production-ready system prompts for AI agents — Planner, Executor, Validator, Orchestrator, and Summarizer. |
-| [**Diagrams**](./diagrams/) | Copy-paste Mermaid diagrams for agent architectures. Use in docs, PRs, and presentations. |
-| [**Agent Decisions**](./agent-decisions/) | Architecture Decision Records (ADRs) for agent systems — document the why behind your design. |
-| [**Reading List**](./reading-list/) | Curated papers, reports, talks, and courses on agentic AI. Updated weekly. |
+| [**The Agentic Stack**](./the-agentic-stack/) | Curated tools for production agent systems — organized by architecture layer. |
+| [**Agent Prompts**](./agent-prompts/) | Production-ready system prompts — Planner, Executor, Validator, Orchestrator, Summarizer. |
+| [**Comparisons**](./comparisons/) | Side-by-side framework comparison: CrewAI vs AutoGen vs LangGraph vs OpenAI SDK vs Mastra. |
+| [**Checklists**](./checklists/) | Pre-launch checklist for agent systems. Don't ship without it. |
+| [**Diagrams**](./diagrams/) | Copy-paste Mermaid diagrams for agent architectures. |
+| [**Agent Decisions**](./agent-decisions/) | Architecture Decision Records (ADRs) for agent systems. |
+| [**Reading List**](./reading-list/) | Curated papers, reports, talks, and courses. Updated weekly. |
 
 ---
 
