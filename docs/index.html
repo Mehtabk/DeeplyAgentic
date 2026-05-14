@@ -256,18 +256,13 @@
         }
         .cta-section h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
         .cta-section p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1rem; }
-        .cta-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
         /* Built by */
         .built-by {
             text-align: center;
             padding: 3rem 0;
-            border-top: 1px solid var(--border);
-            margin-top: 2rem;
         }
         .built-by p { color: var(--text-dim); font-size: 0.9rem; }
-        .built-by a { color: var(--purple); text-decoration: none; font-weight: 600; }
-        .built-by a:hover { text-decoration: underline; }
 
         /* Footer */
         footer {
@@ -288,7 +283,6 @@
             .project-grid { grid-template-columns: 1fr; }
             footer { flex-direction: column; gap: 1rem; text-align: center; }
             nav { flex-direction: column; gap: 1rem; }
-            .cta-links { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
@@ -422,16 +416,13 @@
         <section class="fade-in">
             <div class="cta-section">
                 <h2>Stay ahead of the curve</h2>
-                <p>Follow DeeplyAgentic for weekly insights on agent architecture, tools, and production patterns.</p>
-                <div class="cta-links">
-                    <a href="https://www.linkedin.com/company/deeplyagentic" class="btn btn-primary">Follow on LinkedIn</a>
-                    <a href="https://github.com/Mehtabk/DeeplyAgentic" class="btn btn-secondary">⭐ Star the Repo</a>
-                </div>
+                <p>Weekly insights on agent architecture, tools, and production patterns.</p>
+                <a href="https://www.linkedin.com/company/deeplyagentic" class="btn btn-primary">Follow on LinkedIn →</a>
             </div>
         </section>
 
         <div class="built-by fade-in">
-            <p>Built by <a href="https://www.linkedin.com/in/mehtabkayani/">Mehtab Kayani</a></p>
+            <p>Built by Mehtab Kayani</p>
         </div>
 
         <footer>
@@ -444,7 +435,6 @@
     </div>
 
     <script>
-        // Scroll-triggered fade-in animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
