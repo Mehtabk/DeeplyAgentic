@@ -84,7 +84,7 @@ We welcome contributions. See individual project folders for guidelines, or use 
 ## Connect
 
 - [LinkedIn](https://www.linkedin.com/company/deeplyagentic)
-- 📍 Würzburg, DE | Doha, QA
+- 🌍 EMEA
 
 ---
 
