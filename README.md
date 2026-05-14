@@ -24,26 +24,35 @@ python multi_agent_pipeline.py
 | [**Quickstart**](./quickstart/) | Run a multi-agent pipeline (Planner → Executor → Validator) in 5 minutes. |
 | [**The Agentic Stack**](./the-agentic-stack/) | A curated guide to building production-grade AI agent systems — organized by architecture layer. |
 | [**Agent Prompts**](./agent-prompts/) | Production-ready system prompts for AI agents — Planner, Executor, Validator, Orchestrator, and Summarizer. |
+| [**Diagrams**](./diagrams/) | Copy-paste Mermaid diagrams for agent architectures. Use in docs, PRs, and presentations. |
+| [**Agent Decisions**](./agent-decisions/) | Architecture Decision Records (ADRs) for agent systems — document the why behind your design. |
 | [**Reading List**](./reading-list/) | Curated papers, reports, talks, and courses on agentic AI. Updated weekly. |
 
 ---
 
 ## The 4-Layer Architecture
 
-```
-┌─────────────────────────────────────────────┐
-│  🎯  Orchestration Layer                    │
-│      Routes, coordinates, governs           │
-├─────────────────────────────────────────────┤
-│  🧠  Agent Layer                            │
-│      Skills, memory, reasoning              │
-├─────────────────────────────────────────────┤
-│  🔌  Tool Layer (MCP)                       │
-│      APIs, databases, external services     │
-├─────────────────────────────────────────────┤
-│  🛡️  Guardrails Layer                      │
-│      Constraints, validation, escalation    │
-└─────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Orchestration["🎯 Orchestration Layer"]
+        Router[Router] --> Coordinator[Coordinator]
+    end
+    subgraph Agents["🧠 Agent Layer"]
+        A1[Planner] --> A2[Executor]
+        A2 --> A3[Validator]
+    end
+    subgraph Tools["🔌 Tool Layer - MCP"]
+        T1[APIs] --> T2[Databases]
+        T2 --> T3[Services]
+    end
+    subgraph Guardrails["🛡️ Guardrails"]
+        G1[Validation] --> G2[Escalation]
+    end
+    Orchestration --> Agents
+    Agents --> Tools
+    Guardrails -.->|enforces| Orchestration
+    Guardrails -.->|enforces| Agents
+    Guardrails -.->|enforces| Tools
 ```
 
 ---
