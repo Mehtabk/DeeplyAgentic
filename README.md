@@ -12,6 +12,7 @@
 |---------|-------------|
 | [**The Agentic Stack**](./the-agentic-stack/) | A curated guide to building production-grade AI agent systems — organized by architecture layer (Orchestration → Agents → Tools → Guardrails). |
 | [**Agent Prompts**](./agent-prompts/) | Production-ready system prompts for AI agents — Planner, Executor, Validator, Orchestrator, and Summarizer. |
+| [**Reading List**](./reading-list/) | Curated papers, reports, talks, and courses on agentic AI. Updated weekly. |
 
 ---
 
@@ -49,7 +50,7 @@ This repo is our contribution to fixing that.
 
 ## Contributing
 
-We welcome contributions. See individual project folders for guidelines.
+We welcome contributions. See individual project folders for guidelines, or use the [issue template](https://github.com/Mehtabk/DeeplyAgentic/issues/new/choose) to suggest resources.
 
 ---
 
