@@ -44,6 +44,8 @@
         .terminal-dot{width:10px;height:10px;border-radius:50%}.terminal-dot.red{background:#ef4444}.terminal-dot.yellow{background:#f59e0b}.terminal-dot.green{background:#10b981}
         .terminal-body{padding:1rem 1.5rem;font-family:'SF Mono','Fira Code','Consolas',monospace;font-size:0.9rem}
         .terminal-body .prompt{color:var(--text-dim)}.terminal-body .cmd{color:var(--green)}
+        .cursor{display:inline-block;width:8px;height:1.1em;background:var(--green);vertical-align:text-bottom;animation:blink 1s step-end infinite}
+        @keyframes blink{50%{opacity:0}}
         .btn-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
         .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;transition:all 0.2s}
         .btn-primary{background:var(--purple);color:white}.btn-primary:hover{background:#7c3aed;transform:translateY(-1px)}
@@ -208,9 +210,12 @@
         // Terminal typing animation
         function typeText(el, text, speed, cb) {
             let i = 0;
+            const cursor = document.createElement('span');
+            cursor.className = 'cursor';
+            el.after(cursor);
             function type() {
                 if (i < text.length) { el.textContent += text[i]; i++; setTimeout(type, speed); }
-                else if (cb) setTimeout(cb, 400);
+                else { cursor.remove(); if (cb) setTimeout(cb, 400); }
             }
             type();
         }
