@@ -144,10 +144,14 @@
         </section>
 
         <section class="fade-in">
-            <h2>What's New</h2>
-            <p class="subtitle">Latest activity — updated live from GitHub.</p>
-            <ul class="whats-new" id="whats-new">
-                <li><span class="date">Loading...</span></li>
+            <h2>🔥 Recently Added</h2>
+            <p class="subtitle">Latest tools and resources in the repo.</p>
+            <ul class="whats-new">
+                <li><span class="date">New</span><a href="https://github.com/petergpt/bullshit-benchmark">BullshitBench — Benchmark: does your LLM challenge nonsense or confidently make stuff up?</a></li>
+                <li><span class="date">New</span><a href="https://github.com/optave/ops-codegraph-tool">CodeGraph — MCP server that cuts Claude Code tool calls by 92%</a></li>
+                <li><span class="date">New</span><a href="https://github.com/mindverse/Second-Me">Second-Me — Build your AI clone, runs fully offline</a></li>
+                <li><span class="date">New</span><a href="https://github.com/poloclub/transformer-explainer">Transformer Explainer — Interactive GPT-2 running live in your browser</a></li>
+                <li><span class="date">New</span><a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/quickstart">Ollama Quickstart — Run a multi-agent pipeline locally with zero API keys</a></li>
             </ul>
         </section>
 
@@ -200,24 +204,6 @@
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-        // Live "What's New" from GitHub commits (filtered)
-        fetch('https://api.github.com/repos/Mehtabk/DeeplyAgentic/commits?per_page=20')
-            .then(r => r.json())
-            .then(commits => {
-                const skip = /fix|merge|update readme|typo|clean|refactor|analytics|og url|hamburger/i;
-                const filtered = commits.filter(c => !skip.test(c.commit.message)).slice(0, 5);
-                const list = document.getElementById('whats-new');
-                list.innerHTML = filtered.map(c => {
-                    const date = new Date(c.commit.author.date);
-                    const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                    const msg = c.commit.message.split('\n')[0].replace(/^Add\s*/i, '');
-                    return `<li><span class="date">${dateStr}</span><a href="${c.html_url}" target="_blank">${msg}</a></li>`;
-                }).join('');
-            })
-            .catch(() => {
-                document.getElementById('whats-new').innerHTML = '<li><span class="date">—</span>Check GitHub for latest updates</li>';
-            });
     </script>
 </body>
 </html>
