@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/DeeplyAgentic-logo-horizontal.png" alt="DeeplyAgentic" width="300"/>
+  <img src="./assets/deeplyagentic_logo.jpeg" alt="DeeplyAgentic" width="300"/>
 </p>
 
 <p align="center">
