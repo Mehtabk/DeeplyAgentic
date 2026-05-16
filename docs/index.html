@@ -112,8 +112,8 @@
                     <div class="terminal-dot green"></div>
                 </div>
                 <div class="terminal-body">
-                    <span class="prompt">$ </span><span class="cmd">git clone https://github.com/Mehtabk/DeeplyAgentic.git</span><br>
-                    <span class="prompt">$ </span><span class="cmd">cd DeeplyAgentic/quickstart && uv run multi_agent_pipeline.py</span>
+                    <div><span class="prompt">$ </span><span class="cmd" id="cmd1"></span></div>
+                    <div><span class="prompt">$ </span><span class="cmd" id="cmd2"></span></div>
                 </div>
             </div>
             <div class="btn-group">
@@ -204,6 +204,21 @@
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Terminal typing animation
+        function typeText(el, text, speed, cb) {
+            let i = 0;
+            function type() {
+                if (i < text.length) { el.textContent += text[i]; i++; setTimeout(type, speed); }
+                else if (cb) setTimeout(cb, 400);
+            }
+            type();
+        }
+        setTimeout(() => {
+            typeText(document.getElementById('cmd1'), 'git clone https://github.com/Mehtabk/DeeplyAgentic.git', 30, () => {
+                typeText(document.getElementById('cmd2'), 'cd DeeplyAgentic/quickstart && uv run multi_agent_pipeline.py', 30);
+            });
+        }, 500);
     </script>
 </body>
 </html>
