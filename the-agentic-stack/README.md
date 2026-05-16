@@ -45,6 +45,7 @@ Individual agents with domain expertise, memory, and reasoning capabilities.
 | Agno | Lightweight, high-performance agents | [GitHub](https://github.com/agno-agi/agno) |
 | Mastra | TypeScript agent framework | [GitHub](https://github.com/mastra-ai/mastra) |
 | Semantic Anchors | Shared vocabulary for LLM agents | [GitHub](https://github.com/LLM-Coding/Semantic-Anchors) |
+| Second-Me | Build your AI clone — trains on your memories, runs fully offline | [GitHub](https://github.com/mindverse/Second-Me) |
 
 ## Layer 2: Tools (MCP + APIs)
 
@@ -56,6 +57,8 @@ Connect agents to external systems via standardized protocols.
 | Awesome MCP Servers | Collection of MCP servers | [GitHub](https://github.com/punkpeye/awesome-mcp-servers) |
 | MCP Agent | Build agents using MCP workflows | [GitHub](https://github.com/lastmile-ai/mcp-agent) |
 | Composio | 250+ tool integrations for agents | [GitHub](https://github.com/ComposioHQ/composio) |
+| CodeGraph | MCP server that pre-indexes codebases — cuts tool calls by 92% | [GitHub](https://github.com/optave/ops-codegraph-tool) |
+| Transformer Explainer | Interactive GPT-2 visualization in browser — understand what's inside | [GitHub](https://github.com/poloclub/transformer-explainer) |
 
 ## Layer 1: Guardrails
 
@@ -91,6 +94,6 @@ Found a tool that belongs here? Open an issue or submit a PR.
 
 ## About
 
-Maintained by [DeeplyAgentic](https://www.linkedin.com/company/deeplyagentic) — building smart, scalable AI systems that do the heavy lifting.
+Maintained by [DeeplyAgentic](https://www.deeplyagentic.com) — building smart, scalable AI systems that do the heavy lifting.
 
 🚀 Harness AI. Reclaim Time. Amplify Impact.
