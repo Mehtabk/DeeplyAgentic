@@ -28,6 +28,17 @@ Updated weekly. Star this repo to stay current.
 | [LangGraph Documentation](https://langchain-ai.github.io/langgraph/) | Docs | Stateful agent workflows |
 | [Model Context Protocol Spec](https://modelcontextprotocol.io/) | Spec | Standard for agent-tool communication |
 
+## Open-Source Tools & Projects
+
+| Project | Stars | Description |
+|---------|-------|-------------|
+| [Second-Me](https://github.com/mindverse/Second-Me) | 10k+ | Build your AI clone — trains on your memories, runs fully offline, deploys to decentralized networks |
+| [CrewAI](https://github.com/crewAIInc/crewAI) | 50k | Multi-agent orchestration framework |
+| [LangGraph](https://github.com/langchain-ai/langgraph) | 30k | Build agents as stateful graphs |
+| [AutoGen](https://github.com/microsoft/autogen) | 57k | Multi-agent conversation framework |
+| [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) | 25k | Lightweight multi-agent workflows |
+| [Haystack](https://github.com/deepset-ai/haystack) | 25k | Production RAG & agent pipelines |
+
 ## Industry Reports (2026)
 
 | Report | Source | Key Finding |
@@ -78,4 +89,4 @@ Found something that belongs here? Open a PR.
 
 ---
 
-*Last updated: 2026-05-14*
+*Last updated: 2026-05-16*
