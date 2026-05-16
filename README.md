@@ -9,6 +9,11 @@
   🚀 <strong>Harness AI. Reclaim Time. Amplify Impact.</strong>
 </p>
 
+<p align="center">
+  <a href="https://www.deeplyagentic.com">Website</a> ·
+  <a href="https://www.linkedin.com/company/deeplyagentic">LinkedIn</a>
+</p>
+
 ---
 
 ## Get Started
@@ -78,13 +83,6 @@ This repo is our contribution to fixing that.
 ## Contributing
 
 We welcome contributions. See individual project folders for guidelines, or use the [issue template](https://github.com/Mehtabk/DeeplyAgentic/issues/new/choose) to suggest resources.
-
----
-
-## Connect
-
-- [LinkedIn](https://www.linkedin.com/company/deeplyagentic)
-- 🌍 EMEA
 
 ---
 
