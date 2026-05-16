@@ -5,275 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeeplyAgentic — Build Production-Grade AI Agent Systems</title>
     <meta name="description" content="Open-source architecture, prompts, and tools for building AI agent systems that actually work in production.">
-    <!-- Open Graph / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://deeplyagentic.com">
+    <meta property="og:url" content="https://www.deeplyagentic.com">
     <meta property="og:title" content="DeeplyAgentic — Build Production-Grade AI Agent Systems">
     <meta property="og:description" content="Open-source architecture, prompts, and tools for AI agent systems that actually work in production.">
-    <meta property="og:image" content="https://deeplyagentic.com/og-image.png">
-    <!-- Twitter -->
+    <meta property="og:image" content="https://www.deeplyagentic.com/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DeeplyAgentic — Build Production-Grade AI Agent Systems">
     <meta name="twitter:description" content="Open-source architecture, prompts, and tools for AI agent systems that actually work in production.">
-    <meta name="twitter:image" content="https://deeplyagentic.com/og-image.png">
-    <!-- Favicon -->
+    <meta name="twitter:image" content="https://www.deeplyagentic.com/og-image.png">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
     <style>
-        :root {
-            --purple: #8b5cf6;
-            --cyan: #06b6d4;
-            --green: #10b981;
-            --amber: #f59e0b;
-            --bg: #09090b;
-            --surface: #18181b;
-            --border: #27272a;
-            --text: #fafafa;
-            --text-muted: #a1a1aa;
-            --text-dim: #71717a;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .glow {
-            position: fixed;
-            top: -40%;
-            left: -20%;
-            width: 140%;
-            height: 140%;
-            background: radial-gradient(ellipse at 50% 0%, rgba(139,92,246,0.07) 0%, transparent 60%);
-            pointer-events: none;
-            z-index: 0;
-        }
-        .grid-bg {
-            position: fixed;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-            background-size: 60px 60px;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .logo { font-size: 1.2rem; font-weight: 700; }
-        .logo span { font-weight: 300; }
-        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--text); }
-        .nav-btn { background: var(--purple); color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 500; }
-
-        .hero { text-align: center; padding: 8rem 0 4rem; }
-        .hero-badge {
-            display: inline-block;
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            border: 1px solid var(--border);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            margin-bottom: 1.5rem;
-        }
-        .hero h1 {
-            font-size: 4.2rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-        .hero h1 .gradient {
-            background: linear-gradient(135deg, #8b5cf6, #06b6d4, #8b5cf6);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 4s ease infinite;
-        }
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 580px;
-            margin: 0 auto 1rem;
-        }
-        .hero .tagline {
-            font-size: 0.95rem;
-            color: var(--text-dim);
-            margin-bottom: 2.5rem;
-            font-style: italic;
-        }
-
-        .terminal {
-            display: inline-block;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 2.5rem;
-            text-align: left;
-        }
-        .terminal-header {
-            display: flex;
-            gap: 6px;
-            padding: 0.6rem 1rem;
-            background: rgba(255,255,255,0.03);
-            border-bottom: 1px solid var(--border);
-        }
-        .terminal-dot { width: 10px; height: 10px; border-radius: 50%; }
-        .terminal-dot.red { background: #ef4444; }
-        .terminal-dot.yellow { background: #f59e0b; }
-        .terminal-dot.green { background: #10b981; }
-        .terminal-body {
-            padding: 1rem 1.5rem;
-            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-            font-size: 0.9rem;
-        }
-        .terminal-body .prompt { color: var(--text-dim); }
-        .terminal-body .cmd { color: var(--green); }
-
-        .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-        .btn-primary { background: var(--purple); color: white; }
-        .btn-primary:hover { background: #7c3aed; transform: translateY(-1px); }
-        .btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
-        .btn-secondary:hover { border-color: var(--purple); }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        section { padding: 5rem 0; }
-        section h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.75rem;
-        }
-        section .subtitle {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
-
-        .arch-stack { display: flex; flex-direction: column; gap: 0.5rem; }
-        .arch-layer {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.25rem 1.5rem;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            transition: all 0.2s;
-        }
-        .arch-layer:hover { border-color: var(--purple); transform: translateX(4px); }
-        .arch-layer .icon { font-size: 1.5rem; }
-        .arch-layer .name { font-weight: 600; font-size: 1rem; }
-        .arch-layer .desc { color: var(--text-dim); font-size: 0.85rem; }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-        .project-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s;
-        }
-        .project-card:hover { border-color: var(--purple); transform: translateY(-2px); }
-        .project-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text); }
-        .project-card p { font-size: 0.8rem; color: var(--text-dim); }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1px;
-            background: var(--border);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            margin: 3rem 0;
-        }
-        .stat { background: var(--bg); padding: 2rem; text-align: center; }
-        .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--purple); }
-        .stat-label { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.25rem; }
-
-        .cta-section {
-            text-align: center;
-            padding: 4rem 2rem;
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            background: linear-gradient(135deg, rgba(139,92,246,0.05), rgba(6,182,212,0.05));
-            margin: 2rem 0;
-        }
-        .cta-section h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-        .cta-section p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1rem; }
-
-        .built-by {
-            text-align: center;
-            padding: 3rem 0;
-        }
-        .built-by p { color: var(--text-dim); font-size: 0.9rem; }
-        .built-by a { color: var(--purple); text-decoration: none; font-weight: 600; }
-        .built-by a:hover { text-decoration: underline; }
-
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 3rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        footer .left { color: var(--text-dim); font-size: 0.85rem; }
-        footer .right { display: flex; gap: 1.5rem; }
-        footer .right a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
-        footer .right a:hover { color: var(--text); }
-
-        @media (max-width: 640px) {
-            .hero h1 { font-size: 2.5rem; }
-            .stats { grid-template-columns: 1fr; }
-            .project-grid { grid-template-columns: 1fr; }
-            footer { flex-direction: column; gap: 1rem; text-align: center; }
-            nav { flex-direction: column; gap: 1rem; }
-        }
+        :root{--purple:#8b5cf6;--cyan:#06b6d4;--green:#10b981;--amber:#f59e0b;--bg:#09090b;--surface:#18181b;--border:#27272a;--text:#fafafa;--text-muted:#a1a1aa;--text-dim:#71717a}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+        .glow{position:fixed;top:-40%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse at 50% 0%,rgba(139,92,246,0.07) 0%,transparent 60%);pointer-events:none;z-index:0}
+        .grid-bg{position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+        .container{max-width:1000px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+        nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--border)}
+        .logo{font-size:1.2rem;font-weight:700}.logo span{font-weight:300}
+        .nav-links{display:flex;gap:1.5rem;align-items:center}
+        .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.9rem;transition:color 0.2s}
+        .nav-links a:hover{color:var(--text)}
+        .nav-btn{background:var(--purple);color:white;padding:0.5rem 1rem;border-radius:6px;font-size:0.85rem;font-weight:500}
+        .hero{text-align:center;padding:8rem 0 4rem}
+        .hero-badge{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.8rem;color:var(--text-dim);border:1px solid var(--border);padding:0.3rem 0.8rem;border-radius:20px;margin-bottom:1.5rem}
+        .hero-badge img{height:20px}
+        .hero h1{font-size:4.2rem;font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1.5rem}
+        .hero h1 .gradient{background:linear-gradient(135deg,#8b5cf6,#06b6d4,#8b5cf6);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradientShift 4s ease infinite}
+        @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+        .hero p{font-size:1.25rem;color:var(--text-muted);max-width:580px;margin:0 auto 1rem}
+        .hero .tagline{font-size:0.95rem;color:var(--text-dim);margin-bottom:2.5rem;font-style:italic}
+        .terminal{display:inline-block;background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:2.5rem;text-align:left}
+        .terminal-header{display:flex;gap:6px;padding:0.6rem 1rem;background:rgba(255,255,255,0.03);border-bottom:1px solid var(--border)}
+        .terminal-dot{width:10px;height:10px;border-radius:50%}.terminal-dot.red{background:#ef4444}.terminal-dot.yellow{background:#f59e0b}.terminal-dot.green{background:#10b981}
+        .terminal-body{padding:1rem 1.5rem;font-family:'SF Mono','Fira Code','Consolas',monospace;font-size:0.9rem}
+        .terminal-body .prompt{color:var(--text-dim)}.terminal-body .cmd{color:var(--green)}
+        .btn-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+        .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;transition:all 0.2s}
+        .btn-primary{background:var(--purple);color:white}.btn-primary:hover{background:#7c3aed;transform:translateY(-1px)}
+        .btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border)}.btn-secondary:hover{border-color:var(--purple)}
+        .fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+        .fade-in.visible{opacity:1;transform:translateY(0)}
+        section{padding:5rem 0}
+        section h2{font-size:2.2rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:0.75rem}
+        section .subtitle{color:var(--text-muted);font-size:1.1rem;margin-bottom:3rem}
+        .arch-stack{display:flex;flex-direction:column;gap:0.5rem}
+        .arch-layer{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;border-radius:10px;border:1px solid var(--border);background:var(--surface);transition:all 0.2s}
+        .arch-layer:hover{border-color:var(--purple);transform:translateX(4px)}
+        .arch-layer .icon{font-size:1.5rem}.arch-layer .name{font-weight:600;font-size:1rem}.arch-layer .desc{color:var(--text-dim);font-size:0.85rem}
+        .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+        .project-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-decoration:none;color:inherit;transition:all 0.2s}
+        .project-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+        .project-card h3{font-size:0.95rem;font-weight:600;margin-bottom:0.4rem;color:var(--text)}
+        .project-card p{font-size:0.8rem;color:var(--text-dim)}
+        .audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+        .audience-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center}
+        .audience-card .emoji{font-size:2rem;margin-bottom:0.75rem}
+        .audience-card h3{font-size:0.95rem;font-weight:600;margin-bottom:0.4rem}
+        .audience-card p{font-size:0.8rem;color:var(--text-dim)}
+        .whats-new{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
+        .whats-new li{display:flex;align-items:center;gap:0.75rem;padding:0.75rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:0.9rem}
+        .whats-new .date{color:var(--text-dim);font-size:0.75rem;min-width:70px}
+        .whats-new .tag{background:var(--purple);color:white;font-size:0.7rem;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500}
+        .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:3rem 0}
+        .stat{background:var(--bg);padding:2rem;text-align:center}
+        .stat-number{font-size:2.5rem;font-weight:800;color:var(--purple)}.stat-label{font-size:0.8rem;color:var(--text-dim);margin-top:0.25rem}
+        .cta-section{text-align:center;padding:4rem 2rem;border:1px solid var(--border);border-radius:16px;background:linear-gradient(135deg,rgba(139,92,246,0.05),rgba(6,182,212,0.05));margin:2rem 0}
+        .cta-section h2{font-size:1.8rem;margin-bottom:0.5rem}.cta-section p{color:var(--text-muted);margin-bottom:1.5rem;font-size:1rem}
+        .built-by{text-align:center;padding:3rem 0}.built-by p{color:var(--text-dim);font-size:0.9rem}.built-by a{color:var(--purple);text-decoration:none;font-weight:600}.built-by a:hover{text-decoration:underline}
+        footer{border-top:1px solid var(--border);padding:3rem 0;display:flex;justify-content:space-between;align-items:center}
+        footer .left{color:var(--text-dim);font-size:0.85rem}footer .right{display:flex;gap:1.5rem}footer .right a{color:var(--text-muted);text-decoration:none;font-size:0.85rem}footer .right a:hover{color:var(--text)}
+        @media(max-width:640px){.hero h1{font-size:2.5rem}.stats{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr}.audience-grid{grid-template-columns:1fr}footer{flex-direction:column;gap:1rem;text-align:center}nav{flex-direction:column;gap:1rem}}
     </style>
 </head>
 <body>
@@ -291,7 +94,10 @@
         </nav>
 
         <div class="hero">
-            <div class="hero-badge">Open-source · MIT Licensed</div>
+            <div class="hero-badge">
+                <span>Open-source · MIT Licensed</span>
+                <img src="https://img.shields.io/github/stars/Mehtabk/DeeplyAgentic?style=flat&color=8b5cf6&label=Stars" alt="GitHub Stars">
+            </div>
             <h1>Build more<br><span class="gradient">capable agents</span></h1>
             <p>Architecture, prompts, and tools for AI agent systems that actually work in production.</p>
             <p class="tagline">Harness AI. Reclaim Time. Amplify Impact.</p>
@@ -313,93 +119,70 @@
         </div>
 
         <section class="fade-in">
+            <h2>Who is this for?</h2>
+            <p class="subtitle">If you're building with AI agents — or about to — this is your playbook.</p>
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="emoji">🏗️</div>
+                    <h3>Engineers</h3>
+                    <p>Building multi-agent systems and need architecture patterns that scale.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="emoji">📐</div>
+                    <h3>Architects</h3>
+                    <p>Designing agent platforms and need proven frameworks and ADRs.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="emoji">🚀</div>
+                    <h3>Leaders</h3>
+                    <p>Evaluating agent strategies and need to separate hype from production-ready.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-in">
             <h2>The 4-Layer Architecture</h2>
             <p class="subtitle">Most agent projects fail because of missing architecture, not bad models.</p>
             <div class="arch-stack">
-                <div class="arch-layer">
-                    <span class="icon">🎯</span>
-                    <div>
-                        <div class="name">Orchestration Layer</div>
-                        <div class="desc">Routes requests, coordinates agents, governs outputs</div>
-                    </div>
-                </div>
-                <div class="arch-layer">
-                    <span class="icon">🧠</span>
-                    <div>
-                        <div class="name">Agent Layer</div>
-                        <div class="desc">Skills, memory, reasoning — Planner, Executor, Validator</div>
-                    </div>
-                </div>
-                <div class="arch-layer">
-                    <span class="icon">🔌</span>
-                    <div>
-                        <div class="name">Tool Layer (MCP)</div>
-                        <div class="desc">APIs, databases, external services via Model Context Protocol</div>
-                    </div>
-                </div>
-                <div class="arch-layer">
-                    <span class="icon">🛡️</span>
-                    <div>
-                        <div class="name">Guardrails Layer</div>
-                        <div class="desc">Constraints, validation, human-in-the-loop escalation</div>
-                    </div>
-                </div>
+                <div class="arch-layer"><span class="icon">🎯</span><div><div class="name">Orchestration Layer</div><div class="desc">Routes requests, coordinates agents, governs outputs</div></div></div>
+                <div class="arch-layer"><span class="icon">🧠</span><div><div class="name">Agent Layer</div><div class="desc">Skills, memory, reasoning — Planner, Executor, Validator</div></div></div>
+                <div class="arch-layer"><span class="icon">🔌</span><div><div class="name">Tool Layer (MCP)</div><div class="desc">APIs, databases, external services via Model Context Protocol</div></div></div>
+                <div class="arch-layer"><span class="icon">🛡️</span><div><div class="name">Guardrails Layer</div><div class="desc">Constraints, validation, human-in-the-loop escalation</div></div></div>
             </div>
+        </section>
+
+        <section class="fade-in">
+            <h2>What's New</h2>
+            <p class="subtitle">Latest additions to the repo.</p>
+            <ul class="whats-new">
+                <li><span class="date">May 16</span><span class="tag">Tool</span> CodeGraph — MCP server that cuts tool calls by 92%</li>
+                <li><span class="date">May 16</span><span class="tag">Tool</span> Second-Me — Build your AI clone, runs fully offline</li>
+                <li><span class="date">May 16</span><span class="tag">Learn</span> Transformer Explainer — Interactive GPT-2 visualization</li>
+                <li><span class="date">May 15</span><span class="tag">Site</span> Landing page launched at deeplyagentic.com</li>
+                <li><span class="date">May 14</span><span class="tag">New</span> Framework comparisons: CrewAI vs AutoGen vs LangGraph</li>
+            </ul>
         </section>
 
         <section class="fade-in">
             <h2>Resources</h2>
             <p class="subtitle">Everything you need to build, ship, and scale agent systems.</p>
             <div class="project-grid">
-                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/quickstart" class="project-card">
-                    <h3>⚡ Quickstart</h3>
-                    <p>Run a multi-agent pipeline in 5 minutes.</p>
-                </a>
-                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/the-agentic-stack" class="project-card">
-                    <h3>📚 The Agentic Stack</h3>
-                    <p>Curated tools by architecture layer.</p>
-                </a>
-                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/agent-prompts" class="project-card">
-                    <h3>🧠 Agent Prompts</h3>
-                    <p>Production-ready system prompts for 5 agent roles.</p>
-                </a>
-                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/comparisons" class="project-card">
-                    <h3>🔍 Comparisons</h3>
-                    <p>CrewAI vs AutoGen vs LangGraph vs OpenAI SDK vs Mastra.</p>
-                </a>
-                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/checklists" class="project-card">
-                    <h3>✅ Checklists</h3>
-                    <p>Pre-launch checklist for agent systems.</p>
-                </a>
-                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/diagrams" class="project-card">
-                    <h3>📐 Diagrams</h3>
-                    <p>Copy-paste Mermaid diagrams for agent architectures.</p>
-                </a>
-                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/agent-decisions" class="project-card">
-                    <h3>📝 Agent Decisions</h3>
-                    <p>Architecture Decision Records for agent systems.</p>
-                </a>
-                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/reading-list" class="project-card">
-                    <h3>📖 Reading List</h3>
-                    <p>Curated papers, reports, talks, and courses.</p>
-                </a>
+                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/quickstart" class="project-card"><h3>⚡ Quickstart</h3><p>Run a multi-agent pipeline in 5 minutes.</p></a>
+                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/the-agentic-stack" class="project-card"><h3>📚 The Agentic Stack</h3><p>Curated tools by architecture layer.</p></a>
+                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/agent-prompts" class="project-card"><h3>🧠 Agent Prompts</h3><p>Production-ready system prompts for 5 agent roles.</p></a>
+                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/comparisons" class="project-card"><h3>🔍 Comparisons</h3><p>CrewAI vs AutoGen vs LangGraph vs OpenAI SDK vs Mastra.</p></a>
+                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/checklists" class="project-card"><h3>✅ Checklists</h3><p>Pre-launch checklist for agent systems.</p></a>
+                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/diagrams" class="project-card"><h3>📐 Diagrams</h3><p>Copy-paste Mermaid diagrams for agent architectures.</p></a>
+                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/agent-decisions" class="project-card"><h3>📝 Agent Decisions</h3><p>Architecture Decision Records for agent systems.</p></a>
+                <a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/reading-list" class="project-card"><h3>📖 Reading List</h3><p>Curated papers, reports, talks, and courses.</p></a>
             </div>
         </section>
 
         <section class="fade-in">
             <div class="stats">
-                <div class="stat">
-                    <div class="stat-number">80%</div>
-                    <div class="stat-label">of enterprise apps embed AI agents<br>Gartner Q1 2026</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">1,600+</div>
-                    <div class="stat-label">agents per enterprise by year-end<br>IBM 2026</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">40%</div>
-                    <div class="stat-label">cancelled without architecture<br>Gartner</div>
-                </div>
+                <div class="stat"><div class="stat-number">80%</div><div class="stat-label">of enterprise apps embed AI agents<br>Gartner Q1 2026</div></div>
+                <div class="stat"><div class="stat-number">1,600+</div><div class="stat-label">agents per enterprise by year-end<br>IBM 2026</div></div>
+                <div class="stat"><div class="stat-number">40%</div><div class="stat-label">cancelled without architecture<br>Gartner</div></div>
             </div>
         </section>
 
@@ -423,16 +206,10 @@
             </div>
         </footer>
     </div>
-
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 </body>
