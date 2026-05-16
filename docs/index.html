@@ -201,15 +201,17 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Live "What's New" from GitHub commits
-        fetch('https://api.github.com/repos/Mehtabk/DeeplyAgentic/commits?per_page=7')
+        // Live "What's New" from GitHub commits (filtered)
+        fetch('https://api.github.com/repos/Mehtabk/DeeplyAgentic/commits?per_page=20')
             .then(r => r.json())
             .then(commits => {
+                const skip = /fix|merge|update readme|typo|clean|refactor|analytics|og url|hamburger/i;
+                const filtered = commits.filter(c => !skip.test(c.commit.message)).slice(0, 5);
                 const list = document.getElementById('whats-new');
-                list.innerHTML = commits.map(c => {
+                list.innerHTML = filtered.map(c => {
                     const date = new Date(c.commit.author.date);
                     const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                    const msg = c.commit.message.split('\n')[0];
+                    const msg = c.commit.message.split('\n')[0].replace(/^Add\s*/i, '');
                     return `<li><span class="date">${dateStr}</span><a href="${c.html_url}" target="_blank">${msg}</a></li>`;
                 }).join('');
             })
