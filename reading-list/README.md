@@ -33,6 +33,7 @@ Updated weekly. Star this repo to stay current.
 | Project | Stars | Description |
 |---------|-------|-------------|
 | [Second-Me](https://github.com/mindverse/Second-Me) | 10k+ | Build your AI clone — trains on your memories, runs fully offline, deploys to decentralized networks |
+| [CodeGraph](https://github.com/nicobailon/codegraph) | — | MCP server that pre-indexes codebases into a knowledge graph — cuts tool calls by 92%, supports 19+ languages |
 | [CrewAI](https://github.com/crewAIInc/crewAI) | 50k | Multi-agent orchestration framework |
 | [LangGraph](https://github.com/langchain-ai/langgraph) | 30k | Build agents as stateful graphs |
 | [AutoGen](https://github.com/microsoft/autogen) | 57k | Multi-agent conversation framework |
