@@ -65,9 +65,9 @@
         .audience-card h3{font-size:0.95rem;font-weight:600;margin-bottom:0.4rem}
         .audience-card p{font-size:0.8rem;color:var(--text-dim)}
         .whats-new{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
-        .whats-new li{display:flex;align-items:center;gap:0.75rem;padding:0.75rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:0.9rem}
+        .whats-new li{display:flex;align-items:center;gap:0.75rem;padding:0.75rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:0.85rem}
         .whats-new .date{color:var(--text-dim);font-size:0.75rem;min-width:70px}
-        .whats-new .tag{background:var(--purple);color:white;font-size:0.7rem;padding:0.15rem 0.5rem;border-radius:4px;font-weight:500}
+        .whats-new a{color:var(--text);text-decoration:none}.whats-new a:hover{color:var(--purple)}
         .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:3rem 0}
         .stat{background:var(--bg);padding:2rem;text-align:center}
         .stat-number{font-size:2.5rem;font-weight:800;color:var(--purple)}.stat-label{font-size:0.8rem;color:var(--text-dim);margin-top:0.25rem}
@@ -122,21 +122,9 @@
             <h2>Who is this for?</h2>
             <p class="subtitle">If you're building with AI agents — or about to — this is your playbook.</p>
             <div class="audience-grid">
-                <div class="audience-card">
-                    <div class="emoji">🏗️</div>
-                    <h3>Engineers</h3>
-                    <p>Building multi-agent systems and need architecture patterns that scale.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="emoji">📐</div>
-                    <h3>Architects</h3>
-                    <p>Designing agent platforms and need proven frameworks and ADRs.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="emoji">🚀</div>
-                    <h3>Leaders</h3>
-                    <p>Evaluating agent strategies and need to separate hype from production-ready.</p>
-                </div>
+                <div class="audience-card"><div class="emoji">🏗️</div><h3>Engineers</h3><p>Building multi-agent systems and need architecture patterns that scale.</p></div>
+                <div class="audience-card"><div class="emoji">📐</div><h3>Architects</h3><p>Designing agent platforms and need proven frameworks and ADRs.</p></div>
+                <div class="audience-card"><div class="emoji">🚀</div><h3>Leaders</h3><p>Evaluating agent strategies and need to separate hype from production-ready.</p></div>
             </div>
         </section>
 
@@ -153,13 +141,9 @@
 
         <section class="fade-in">
             <h2>What's New</h2>
-            <p class="subtitle">Latest additions to the repo.</p>
-            <ul class="whats-new">
-                <li><span class="date">May 16</span><span class="tag">Tool</span> CodeGraph — MCP server that cuts tool calls by 92%</li>
-                <li><span class="date">May 16</span><span class="tag">Tool</span> Second-Me — Build your AI clone, runs fully offline</li>
-                <li><span class="date">May 16</span><span class="tag">Learn</span> Transformer Explainer — Interactive GPT-2 visualization</li>
-                <li><span class="date">May 15</span><span class="tag">Site</span> Landing page launched at deeplyagentic.com</li>
-                <li><span class="date">May 14</span><span class="tag">New</span> Framework comparisons: CrewAI vs AutoGen vs LangGraph</li>
+            <p class="subtitle">Latest activity — updated live from GitHub.</p>
+            <ul class="whats-new" id="whats-new">
+                <li><span class="date">Loading...</span></li>
             </ul>
         </section>
 
@@ -207,10 +191,27 @@
         </footer>
     </div>
     <script>
+        // Scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Live "What's New" from GitHub commits
+        fetch('https://api.github.com/repos/Mehtabk/DeeplyAgentic/commits?per_page=7')
+            .then(r => r.json())
+            .then(commits => {
+                const list = document.getElementById('whats-new');
+                list.innerHTML = commits.map(c => {
+                    const date = new Date(c.commit.author.date);
+                    const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                    const msg = c.commit.message.split('\n')[0];
+                    return `<li><span class="date">${dateStr}</span><a href="${c.html_url}" target="_blank">${msg}</a></li>`;
+                }).join('');
+            })
+            .catch(() => {
+                document.getElementById('whats-new').innerHTML = '<li><span class="date">—</span>Check GitHub for latest updates</li>';
+            });
     </script>
 </body>
 </html>
