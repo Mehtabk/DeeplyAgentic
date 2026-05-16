@@ -69,6 +69,7 @@ Hard constraints, quality hooks, and human-in-the-loop escalation.
 | Guardrails AI | Input/output validation for LLMs | [GitHub](https://github.com/guardrails-ai/guardrails) |
 | NeMo Guardrails | NVIDIA's programmable guardrails | [GitHub](https://github.com/NVIDIA/NeMo-Guardrails) |
 | LLM Guard | Security toolkit for LLM interactions | [GitHub](https://github.com/protectai/llm-guard) |
+| BullshitBench | Benchmark testing if LLMs challenge nonsensical prompts instead of confidently answering | [GitHub](https://github.com/petergpt/bullshit-benchmark) |
 
 ---
 
