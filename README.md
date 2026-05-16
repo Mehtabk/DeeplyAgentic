@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="./assets/deeplyagentic_logo.jpeg" alt="DeeplyAgentic" width="200"/>
+  <img src="./assets/DeeplyAgentic-logo-horizontal.png" alt="DeeplyAgentic" width="300"/>
 </p>
-
-<h1 align="center">DeeplyAgentic</h1>
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
