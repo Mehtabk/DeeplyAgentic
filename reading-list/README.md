@@ -17,6 +17,7 @@ Updated weekly. Star this repo to stay current.
 | [AutoGen](https://arxiv.org/abs/2308.08155) | 2023 | Multi-agent conversation framework |
 | [Chain-of-Thought Prompting](https://arxiv.org/abs/2201.11903) | 2022 | Step-by-step reasoning improves complex tasks |
 | [Self-Refine](https://arxiv.org/abs/2303.17651) | 2023 | Iterative self-feedback without human input |
+| [BES: Backward-Forward Evolutionary Search](https://github.com/Embodied-Minds-Lab/BES) | 2025 | Self-improving AI on hard reasoning — forward recombination + backward sub-goal decomposition beats standard post-training |
 
 ## Architecture & Orchestration
 
