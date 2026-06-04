@@ -26,11 +26,11 @@
 
 | Project | Why it matters |
 |---------|---------------|
+| [Deep Agents](https://github.com/langchain-ai/deep-agents) | LangChain's open-source Claude Code alternative — any LLM, $0, sub-agents, memory, checkpointing via LangGraph |
+| [Hermes Agent](https://github.com/nesquena/hermes-webui) | Persistent AI assistant with memory across sessions — web + CLI + 10 messaging platforms, scheduled jobs |
 | [CodeGraph](https://github.com/optave/ops-codegraph-tool) | MCP server that cuts Claude Code tool calls by 92% — pre-indexes your codebase into a knowledge graph |
 | [Second-Me](https://github.com/mindverse/Second-Me) | Build your AI clone that runs fully offline — trains on your memories, deploys to decentralized networks |
 | [Transformer Explainer](https://github.com/poloclub/transformer-explainer) | Interactive GPT-2 running live in your browser — see embeddings, attention, and token ranking in real time |
-| [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) | Official lightweight multi-agent framework from OpenAI — handoffs, tools, guardrails built in |
-| [Kimi-K2](https://github.com/MoonshotAI/Kimi-K2) | MoE model with 32B active / 1T total parameters — open-source frontier reasoning |
 
 ---
 

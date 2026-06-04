@@ -32,6 +32,8 @@ Updated weekly. Star this repo to stay current.
 
 | Project | Stars | Description |
 |---------|-------|-------------|
+| [Deep Agents](https://github.com/langchain-ai/deep-agents) | — | LangChain's open-source Claude Code alternative — any LLM, sub-agents, persistent memory, checkpointing, MCP support |
+| [Hermes Agent](https://github.com/nesquena/hermes-webui) | — | Persistent AI assistant with memory across sessions — web + CLI + 10 messaging platforms, scheduled offline jobs |
 | [Second-Me](https://github.com/mindverse/Second-Me) | 10k+ | Build your AI clone — trains on your memories, runs fully offline, deploys to decentralized networks |
 | [CodeGraph](https://github.com/optave/ops-codegraph-tool) | 50+ | MCP server that pre-indexes codebases into a knowledge graph — cuts tool calls by 92%, supports 11+ languages |
 | [Transformer Explainer](https://github.com/poloclub/transformer-explainer) | — | Interactive visualization of GPT-2 running live in your browser — see embeddings, attention, and token ranking in real time |
