@@ -34,6 +34,7 @@ Updated weekly. Star this repo to stay current.
 | Project | Stars | Description |
 |---------|-------|-------------|
 | [Mirage](https://github.com/strukto-ai/mirage) | — | Virtual filesystem mounting S3, Drive, Slack, Gmail, GitHub, Notion, Postgres — agents use bash commands, snapshot/rollback workspaces |
+| [Obsidian Second Brain](https://github.com/eugeniughelbur/obsidian-second-brain) | 1.5k | Writable agent memory via Obsidian — 43 commands, mutation over accumulation, works across Claude Code, Codex, Gemini, OpenCode |
 | [Deep Agents](https://github.com/langchain-ai/deep-agents) | — | LangChain's open-source Claude Code alternative — any LLM, sub-agents, persistent memory, checkpointing, MCP support |
 | [Hermes Agent](https://github.com/nesquena/hermes-webui) | — | Persistent AI assistant with memory across sessions — web + CLI + 10 messaging platforms, scheduled offline jobs |
 | [Second-Me](https://github.com/mindverse/Second-Me) | 10k+ | Build your AI clone — trains on your memories, runs fully offline, deploys to decentralized networks |
