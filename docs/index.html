@@ -45,7 +45,6 @@
         .nav-btn{background:var(--purple);color:white!important;padding:0.5rem 1rem;border-radius:6px;font-size:0.85rem;font-weight:500}
         .hero{text-align:center;padding:8rem 0 4rem}
         .hero-badge{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.8rem;color:var(--text-dim);border:1px solid var(--border);padding:0.3rem 0.8rem;border-radius:20px;margin-bottom:1.5rem}
-        .hero-badge img{height:20px}
         .hero h1{font-size:4.2rem;font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1.5rem}
         .hero h1 .gradient{background:linear-gradient(135deg,#8b5cf6,#06b6d4,#8b5cf6);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradientShift 4s ease infinite}
         @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
@@ -122,7 +121,6 @@
         <div class="hero">
             <div class="hero-badge">
                 <span>Open-source · MIT Licensed</span>
-                <img src="https://img.shields.io/github/stars/Mehtabk/DeeplyAgentic?style=flat&color=8b5cf6&label=Stars" alt="GitHub Stars">
             </div>
             <h1>Build more<br><span class="gradient">capable agents</span></h1>
             <p>Architecture, prompts, and tools for AI agent systems that actually work in production.</p>
@@ -250,10 +248,6 @@
         }, 500);
 
         // Live star count
-        fetch('https://api.github.com/repos/Mehtabk/DeeplyAgentic')
-            .then(r=>r.json())
-            .then(d=>{if(d.stargazers_count)document.getElementById('star-count').textContent=d.stargazers_count+' Stars';})
-            .catch(()=>{});
     </script>
 </body>
 </html>
