@@ -41,11 +41,13 @@ Individual agents with domain expertise, memory, and reasoning capabilities.
 | Tool | Description | Link |
 |------|-------------|------|
 | Claude Code | Agentic coding in terminal | [Docs](https://docs.anthropic.com/en/docs/claude-code) |
+| Claude Fable 5 | Mythos-class model for autonomous multi-hour tasks — parallel subagents, vision-only reasoning, novel research | [Announcement](https://www.anthropic.com/news/claude-fable-5-mythos-5) |
 | OpenAI Agents SDK | Build agents with tools and handoffs | [GitHub](https://github.com/openai/openai-agents-python) |
 | Agno | Lightweight, high-performance agents | [GitHub](https://github.com/agno-agi/agno) |
 | Mastra | TypeScript agent framework | [GitHub](https://github.com/mastra-ai/mastra) |
 | Semantic Anchors | Shared vocabulary for LLM agents | [GitHub](https://github.com/LLM-Coding/Semantic-Anchors) |
 | Second-Me | Build your AI clone — trains on your memories, runs fully offline | [GitHub](https://github.com/mindverse/Second-Me) |
+| Skills.sh | Open ecosystem for reusable agent skills — install procedural knowledge with one command across 20+ agents | [Website](https://www.skills.sh) |
 
 ## Layer 2: Tools (MCP + APIs)
 

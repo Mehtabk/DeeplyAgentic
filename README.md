@@ -26,6 +26,8 @@
 
 | Project | Why it matters |
 |---------|---------------|
+| [Claude Fable 5](https://www.anthropic.com/news/claude-fable-5-mythos-5) | Mythos-class model publicly available — autonomous multi-hour tasks, parallel subagents, beat Pokémon with vision alone, novel genomics research |
+| [Skills.sh](https://www.skills.sh) | Open ecosystem for reusable agent skills — one `npx` command gives your agent procedural knowledge across 20+ coding agents |
 | [Mirage](https://github.com/strukto-ai/mirage) | Virtual filesystem that mounts S3, Drive, Slack, Gmail, GitHub, Notion, Postgres under one root — agents use bash, zero API translation |
 | [Deep Agents](https://github.com/langchain-ai/deep-agents) | LangChain's open-source Claude Code alternative — any LLM, $0, sub-agents, memory, checkpointing via LangGraph |
 | [Hermes Agent](https://github.com/nesquena/hermes-webui) | Persistent AI assistant with memory across sessions — web + CLI + 10 messaging platforms, scheduled jobs |
@@ -60,6 +62,7 @@ uv run multi_agent_pipeline.py
 | [**✅ Checklists**](./checklists/) | Pre-launch checklist for agent systems. Don't ship without it. |
 | [**📐 Diagrams**](./diagrams/) | Copy-paste Mermaid diagrams for agent architectures. |
 | [**📝 Agent Decisions**](./agent-decisions/) | Architecture Decision Records (ADRs) for agent systems. |
+| [**🔁 Patterns**](./patterns/) | Reusable architectural patterns — cost routing, escalation, retry logic. |
 | [**📖 Reading List**](./reading-list/) | Curated papers, reports, talks, and courses. Updated weekly. |
 
 ---
@@ -101,6 +104,18 @@ flowchart TB
 | 40% of agentic AI projects cancelled without architecture | Gartner |
 | 1,600+ agents per enterprise by year-end | IBM 2026 |
 | 1,445% surge in multi-agent inquiries | Gartner |
+
+---
+
+## Community
+
+| | |
+|---|---|
+| 💼 [LinkedIn](https://www.linkedin.com/company/deeplyagentic) | Architecture breakdowns, tool reviews, and weekly agent ecosystem updates |
+| 🌐 [Website](https://www.deeplyagentic.com) | Landing page and resource hub |
+| 📰 [Changelog](./CHANGELOG.md) | Weekly updates to the repo |
+
+> **Want to be featured?** If you're using DeeplyAgentic patterns in production, open a PR to add your story.
 
 ---
 
