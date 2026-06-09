@@ -26,6 +26,7 @@
 
 | Project | Why it matters |
 |---------|---------------|
+| [Odysseus](https://github.com/pewdiepie-archdaemon/odysseus) | Self-hosted AI workspace — chat, agents, deep research, email, calendar, memory — 65k ⭐ in weeks |
 | [Claude Fable 5](https://www.anthropic.com/news/claude-fable-5-mythos-5) | Mythos-class model publicly available — autonomous multi-hour tasks, parallel subagents, beat Pokémon with vision alone, novel genomics research |
 | [Skills.sh](https://www.skills.sh) | Open ecosystem for reusable agent skills — one `npx` command gives your agent procedural knowledge across 20+ coding agents |
 | [Mirage](https://github.com/strukto-ai/mirage) | Virtual filesystem that mounts S3, Drive, Slack, Gmail, GitHub, Notion, Postgres under one root — agents use bash, zero API translation |
