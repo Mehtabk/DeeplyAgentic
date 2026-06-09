@@ -43,6 +43,7 @@ Updated weekly. Star this repo to stay current.
 | [CodeGraph](https://github.com/optave/ops-codegraph-tool) | 50+ | MCP server that pre-indexes codebases into a knowledge graph — cuts tool calls by 92%, supports 11+ languages |
 | [Transformer Explainer](https://github.com/poloclub/transformer-explainer) | — | Interactive visualization of GPT-2 running live in your browser — see embeddings, attention, and token ranking in real time |
 | [CrewAI](https://github.com/crewAIInc/crewAI) | 50k | Multi-agent orchestration framework |
+| [OpenHands](https://github.com/OpenHands/OpenHands) | 76k | AI-driven development platform — SDK, CLI, RBAC, Kubernetes, GitHub/GitLab/Slack/Jira integrations |
 | [LangGraph](https://github.com/langchain-ai/langgraph) | 30k | Build agents as stateful graphs |
 | [AutoGen](https://github.com/microsoft/autogen) | 57k | Multi-agent conversation framework |
 | [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) | 25k | Lightweight multi-agent workflows |
