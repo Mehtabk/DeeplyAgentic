@@ -34,6 +34,7 @@ Updated weekly. Star this repo to stay current.
 | Project | Stars | Description |
 |---------|-------|-------------|
 | [OpenSandbox](https://github.com/alibaba/OpenSandbox) | 11k | Secure sandbox runtime for coding agents — Docker/K8s backends, gVisor/Kata/Firecracker isolation, egress policy, MCP server, audit trails |
+| [LiteParse v2](https://github.com/run-llama/liteparse) | — | Fastest open-source PDF parser — 457 pages in 0.7s, Rust core, 50+ doc types, runs local on Python/Node/browser/edge |
 | [Mirage](https://github.com/strukto-ai/mirage) | — | Virtual filesystem mounting S3, Drive, Slack, Gmail, GitHub, Notion, Postgres — agents use bash commands, snapshot/rollback workspaces |
 | [Obsidian Second Brain](https://github.com/eugeniughelbur/obsidian-second-brain) | 1.5k | Writable agent memory via Obsidian — 43 commands, mutation over accumulation, works across Claude Code, Codex, Gemini, OpenCode |
 | [Deep Agents](https://github.com/langchain-ai/deep-agents) | — | LangChain's open-source Claude Code alternative — any LLM, sub-agents, persistent memory, checkpointing, MCP support |
