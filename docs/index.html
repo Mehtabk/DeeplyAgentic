@@ -125,6 +125,11 @@
             <h1>Build more<br><span class="gradient">capable agents</span></h1>
             <p>Architecture, prompts, and tools for AI agent systems that actually work in production.</p>
             <p class="tagline">Harness AI. Reclaim Time. Amplify Impact.</p>
+            <div style="display:flex;justify-content:center;gap:2rem;margin-bottom:2rem;flex-wrap:wrap">
+                <span style="font-size:0.85rem;color:var(--text-muted)">🏗️ <strong style="color:var(--text)">4-layer stack</strong> used in production</span>
+                <span style="font-size:0.85rem;color:var(--text-muted)">💰 <strong style="color:var(--text)">73% cost reduction</strong> with routing patterns</span>
+                <span style="font-size:0.85rem;color:var(--text-muted)">📅 <strong style="color:var(--text)">Updated weekly</strong> since May 2026</span>
+            </div>
             <div class="terminal">
                 <div class="terminal-header">
                     <div class="terminal-dot red"></div>
@@ -162,11 +167,11 @@
             <h2>🔥 Recently Added</h2>
             <p class="subtitle">Latest tools and resources in the repo.</p>
             <ul class="whats-new">
-                <li><span class="date">New</span><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5 — Mythos-class model for autonomous multi-hour tasks, parallel subagents, vision-only reasoning</a></li>
-                <li><span class="date">New</span><a href="https://www.skills.sh">Skills.sh — Open ecosystem for reusable agent skills across 20+ coding agents</a></li>
-                <li><span class="date">New</span><a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/patterns">Cost-Routing Pattern — Route tasks to the cheapest capable model. Save 73% on inference.</a></li>
-                <li><span class="date">New</span><a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/agent-decisions/004-fable5-for-long-running-tasks.md">ADR-004 — Why Claude Fable 5 for long-running agentic tasks</a></li>
-                <li><span class="date">New</span><a href="https://github.com/optave/ops-codegraph-tool">CodeGraph — MCP server that cuts Claude Code tool calls by 92%</a></li>
+                <li><span class="date">Jun 9</span><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5 — Mythos-class model for autonomous multi-hour tasks, parallel subagents, vision-only reasoning</a></li>
+                <li><span class="date">Jun 9</span><a href="https://www.skills.sh">Skills.sh — Open ecosystem for reusable agent skills across 20+ coding agents</a></li>
+                <li><span class="date">Jun 9</span><a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/patterns">Cost-Routing Pattern — Route tasks to the cheapest capable model. Save 73% on inference.</a></li>
+                <li><span class="date">Jun 9</span><a href="https://github.com/Mehtabk/DeeplyAgentic/tree/main/agent-decisions/004-fable5-for-long-running-tasks.md">ADR-004 — Why Claude Fable 5 for long-running agentic tasks</a></li>
+                <li><span class="date">May 28</span><a href="https://github.com/optave/ops-codegraph-tool">CodeGraph — MCP server that cuts Claude Code tool calls by 92%</a></li>
             </ul>
         </section>
 
@@ -188,17 +193,17 @@
 
         <section class="fade-in">
             <div class="cta-section">
-                <h2>Stay ahead of the curve</h2>
-                <p>Weekly insights on agent architecture, tools, and production patterns.</p>
+                <h2>Ship agents that don't get cancelled</h2>
+                <p>Weekly architecture breakdowns, new tools, and production patterns — straight from the repo.</p>
                 <div class="btn-group">
-                    <a href="https://www.linkedin.com/company/deeplyagentic" class="btn btn-primary">Follow on LinkedIn →</a>
-                    <a href="https://www.linkedin.com/in/mehtabkayani/" class="btn btn-secondary">Book a free architecture chat</a>
+                    <a href="https://github.com/Mehtabk/DeeplyAgentic" class="btn btn-primary">⭐ Star the Repo →</a>
+                    <a href="https://www.linkedin.com/company/deeplyagentic" class="btn btn-secondary">Follow for Weekly Updates</a>
                 </div>
             </div>
         </section>
 
         <div class="built-by fade-in">
-            <p>Built by <a href="https://www.linkedin.com/in/mehtabkayani/">Mehtab Kayani</a> — AI architect, solo founder, building in public.</p>
+            <p>The architecture reference for teams building production agent systems.<br><span style="color:var(--text-dim);font-size:0.8rem">Maintained weekly · Open source · Used by engineers at startups and enterprises</span></p>
         </div>
 
         <footer>
@@ -249,6 +254,14 @@
         }, 500);
 
         // Live star count
+        fetch('https://api.github.com/repos/Mehtabk/DeeplyAgentic')
+            .then(r => r.json())
+            .then(data => {
+                if (data.stargazers_count) {
+                    const count = data.stargazers_count >= 1000 ? (data.stargazers_count/1000).toFixed(1)+'k' : data.stargazers_count;
+                    document.getElementById('star-count').textContent = count + ' Stars';
+                }
+            }).catch(() => {});
     </script>
 </body>
 </html>
