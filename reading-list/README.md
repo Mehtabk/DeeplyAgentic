@@ -44,6 +44,9 @@ Updated weekly. Star this repo to stay current.
 | [Transformer Explainer](https://github.com/poloclub/transformer-explainer) | — | Interactive visualization of GPT-2 running live in your browser — see embeddings, attention, and token ranking in real time |
 | [CrewAI](https://github.com/crewAIInc/crewAI) | 50k | Multi-agent orchestration framework |
 | [OpenHands](https://github.com/OpenHands/OpenHands) | 76k | AI-driven development platform — SDK, CLI, RBAC, Kubernetes, GitHub/GitLab/Slack/Jira integrations |
+| [SkillSpector](https://github.com/nvidia/skillspector) | — | NVIDIA's security scanner for agent skills — detects vulnerabilities, malicious patterns, risk scores. LangGraph workflow, SARIF output |
+| [Skills Best Practices](https://github.com/mgechev/skills-best-practices) | — | Definitive guide to structuring agent skills — folder conventions, lazy loading, description triggers, 500-line max |
+| [AI Engineering From Scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | — | 230+ lessons across 20 phases — math to agents, MCP, swarms. Python, TypeScript, Rust, Julia |
 | [LangGraph](https://github.com/langchain-ai/langgraph) | 30k | Build agents as stateful graphs |
 | [AutoGen](https://github.com/microsoft/autogen) | 57k | Multi-agent conversation framework |
 | [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) | 25k | Lightweight multi-agent workflows |
@@ -62,6 +65,7 @@ Updated weekly. Star this repo to stay current.
 
 | Talk | Speaker | Topic |
 |------|---------|-------|
+| [Code w/ Claude 2026 — Full Playlist (15 talks)](https://youtube.com/playlist?list=PLmWCw1CzcFinm44PAkEoR2glf-iNPhulP) | Anthropic | Subagents, MCP, scaling to real codebases, managed agents, proactive workflows |
 | [Spec-Driven Development: How AI Changed Everything](https://lnkd.in/eAqVETdw) | Simon Martinelli | Why specs matter more with AI agents |
 | [Agentic RAG with OpenAI Agents SDK + MCP](https://www.linkedin.com/in/eddonner) | Ed Donner | Building RAG agents with MCP servers |
 
@@ -99,4 +103,4 @@ Found something that belongs here? Open a PR.
 
 ---
 
-*Last updated: 2026-05-16*
+*Last updated: 2026-06-20*
