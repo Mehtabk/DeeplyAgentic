@@ -63,7 +63,7 @@ uv run multi_agent_pipeline.py
 | [**✅ Checklists**](./checklists/) | Pre-launch checklist for agent systems. Don't ship without it. |
 | [**📐 Diagrams**](./diagrams/) | Copy-paste Mermaid diagrams for agent architectures. |
 | [**📝 Agent Decisions**](./agent-decisions/) | Architecture Decision Records (ADRs) for agent systems. |
-| [**🔁 Patterns**](./patterns/) | Reusable architectural patterns — cost routing, escalation, retry logic. |
+| [**🔁 Patterns**](./patterns/) | Reusable architectural patterns — cost routing, the 8 canonical agent architectures, decision matrix. |
 | [**📖 Reading List**](./reading-list/) | Curated papers, reports, talks, and courses. Updated weekly. |
 
 ---

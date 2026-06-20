@@ -4,6 +4,13 @@ All notable changes to DeeplyAgentic are documented here.
 
 ---
 
+## [2026-06-20]
+
+### Added
+- `patterns/architecture-patterns.md` — The 8 canonical agent architecture patterns (ReAct, Reflexion, Supervisor–Worker, Role-Based Team, Debate, Verifier–Critic, Graph-Based, Swarm) with decision matrix, framework support matrix, production composition guide, and common failure modes
+
+---
+
 ## [2026-06-09]
 
 ### Added
