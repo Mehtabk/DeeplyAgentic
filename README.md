@@ -26,14 +26,14 @@
 
 | Project | Why it matters |
 |---------|---------------|
-| [Odysseus](https://github.com/pewdiepie-archdaemon/odysseus) | Self-hosted AI workspace — chat, agents, deep research, email, calendar, memory — 65k ⭐ in weeks |
-| [Claude Fable 5](https://www.anthropic.com/news/claude-fable-5-mythos-5) | Mythos-class model publicly available — autonomous multi-hour tasks, parallel subagents, beat Pokémon with vision alone, novel genomics research |
-| [Skills.sh](https://www.skills.sh) | Open ecosystem for reusable agent skills — one `npx` command gives your agent procedural knowledge across 20+ coding agents |
-| [Mirage](https://github.com/strukto-ai/mirage) | Virtual filesystem that mounts S3, Drive, Slack, Gmail, GitHub, Notion, Postgres under one root — agents use bash, zero API translation |
+| [SkillSpector](https://github.com/nvidia/skillspector) | NVIDIA's security scanner for agent skills — found malicious intent in 5% of bundles. Scan before you install. |
+| [Skills Best Practices](https://github.com/mgechev/skills-best-practices) | The definitive guide to structuring agent skills — folder conventions, lazy loading, description triggers |
+| [AI Engineering From Scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 230+ lessons across 20 phases — from linear algebra to autonomous agent swarms. Free. |
+| [Claude Code Talks](https://youtube.com/playlist?list=PLmWCw1CzcFinm44PAkEoR2glf-iNPhulP) | 15 sessions from Anthropic's Code w/ Claude 2026 — subagents, MCP, scaling patterns |
+| [Odysseus](https://github.com/pewdiepie-archdaemon/odysseus) | Self-hosted AI workspace — chat, agents, deep research, email, calendar, memory — 65k ⭐ |
 | [Deep Agents](https://github.com/langchain-ai/deep-agents) | LangChain's open-source Claude Code alternative — any LLM, $0, sub-agents, memory, checkpointing via LangGraph |
-| [Hermes Agent](https://github.com/nesquena/hermes-webui) | Persistent AI assistant with memory across sessions — web + CLI + 10 messaging platforms, scheduled jobs |
+| [Mirage](https://github.com/strukto-ai/mirage) | Virtual filesystem that mounts S3, Drive, Slack, Gmail, GitHub, Notion, Postgres under one root — agents use bash, zero API translation |
 | [CodeGraph](https://github.com/optave/ops-codegraph-tool) | MCP server that cuts Claude Code tool calls by 92% — pre-indexes your codebase into a knowledge graph |
-| [Second-Me](https://github.com/mindverse/Second-Me) | Build your AI clone that runs fully offline — trains on your memories, deploys to decentralized networks |
 
 ---
 
