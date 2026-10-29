@@ -22,7 +22,14 @@
 
 ---
 
-## 🔥 Trending This Week
+## 🆕 What's New (Oct 2026)
+
+- **[ADR-005: Keyless deploy with pipeline-bound identity](./agent-decisions/005-keyless-deploy-pipeline-identity.md)** — why hosted agents should authenticate as a short-lived pipeline identity, not a runner-held API key. Validated on AWS Bedrock AgentCore *and* Azure AI Foundry.
+- **[ADR-006: Grounding is a tool-design choice; safety is a gate, not a prompt](./agent-decisions/006-grounding-is-tool-design-safety-is-a-gate.md)** — two failure modes (hallucination, prompt injection) reframed as architecture decisions, proven deterministically on two stacks.
+
+---
+
+## 🔥 Trending
 
 | Project | Why it matters |
 |---------|---------------|
@@ -97,14 +104,19 @@ flowchart TB
 
 ---
 
-## Key Stats (May 2026)
+## Key Stats (Oct 2026)
 
 | Stat | Source |
 |------|--------|
-| 80% of enterprise apps embed at least one AI agent | Gartner Q1 2026 |
-| 40% of agentic AI projects cancelled without architecture | Gartner |
-| 1,600+ agents per enterprise by year-end | IBM 2026 |
-| 1,445% surge in multi-agent inquiries | Gartner |
+| Only 17% of organizations have deployed AI agents — but 60%+ plan to within two years | Gartner 2026 CIO Survey |
+| 40%+ of agentic AI projects will be cancelled by end of 2027 (cost, unclear value, weak controls) | Gartner |
+| Fewer than 10% of agentic deployments deliver robust ROI today | Gartner |
+| Agentic AI software spend projected to reach $985B by 2030 (62.7% CAGR from 2025) | Gartner |
+| Purpose-built AI agent software spend: $206.5B in 2026, up 139% YoY | Gartner |
+
+> The adoption gap is the whole point: demand is near-universal, but most projects
+> stall on missing architecture, runaway cost, and absent guardrails — exactly the
+> three things this repo is about.
 
 ---
 

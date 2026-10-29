@@ -4,6 +4,19 @@ All notable changes to DeeplyAgentic are documented here.
 
 ---
 
+## [2026-10-29]
+
+### Added
+- `agent-decisions/005-keyless-deploy-pipeline-identity.md` — ADR-005: deploy agents with a short-lived pipeline-bound identity instead of runner-held API keys. Validated on AWS Bedrock AgentCore and Azure AI Foundry.
+- `agent-decisions/006-grounding-is-tool-design-safety-is-a-gate.md` — ADR-006: grounding is a property of the tool set, not the model; safety is a code-level gate, not a prompt instruction. Proven deterministically across both stacks.
+- "What's New" section in README highlighting the latest ADRs.
+
+### Changed
+- Refreshed "Key Stats" to verified Oct 2026 Gartner figures (adoption gap, cancellation rate, ROI, spend forecasts); replaces the stale May 2026 table.
+- Relabelled "Trending This Week" → "Trending" to match the repo's actual update cadence.
+
+---
+
 ## [2026-06-20]
 
 ### Added
