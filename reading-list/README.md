@@ -2,7 +2,7 @@
 
 > Curated papers, articles, talks, and resources on building AI agent systems.
 
-Updated weekly. Star this repo to stay current.
+Updated periodically — see dates. Star this repo to follow along.
 
 ---
 
@@ -103,4 +103,4 @@ Found something that belongs here? Open a PR.
 
 ---
 
-*Last updated: 2026-06-20*
+*Last updated: 2026-10-29*

@@ -1,17 +1,27 @@
 # Framework Comparisons
 
-> The most comprehensive side-by-side comparison of AI agent frameworks. Updated May 2026.
+> The most comprehensive side-by-side comparison of AI agent frameworks. Updated Oct 2026.
 >
 > ⭐ Star this repo if you find it useful — it helps others discover it.
 
 ---
 
-## Multi-Agent Orchestration Frameworks (May 2026)
+> **Landscape shift to know (late 2026):** Microsoft moved **AutoGen into maintenance
+> mode** (Oct 2025); its successor, **Microsoft Agent Framework 1.0**, reached GA in
+> April 2026 — treat AutoGen as legacy for new builds. **LangGraph** is now 1.0/1.1 GA
+> and **CrewAI** hit 1.0 GA. **OpenAI** graduated Swarm into the production **Agents SDK**.
+> **Google ADK** shipped across multiple languages for enterprise. The AutoGen community
+> also forked into **AG2**. Pick for where a project is *going*, not where the hype was.
 
-| Feature | CrewAI | AutoGen | LangGraph | OpenAI Agents SDK | Mastra |
+---
+
+## Multi-Agent Orchestration Frameworks (Oct 2026)
+
+| Feature | CrewAI | AutoGen *(maintenance)* | LangGraph | OpenAI Agents SDK | Mastra |
 |---------|--------|---------|-----------|-------------------|--------|
 | **Language** | Python | Python | Python | Python | TypeScript |
-| **Stars** | 51K | 58K | 32K | 26K | 24K |
+| **Status (Oct 2026)** | 1.0 GA | ⚠️ Maintenance → see Microsoft Agent Framework 1.0 | 1.0 / 1.1 GA | GA (ex-Swarm) | Active |
+| **Stars** (approx) | ~51K | ~58K | ~32K | ~26K | ~24K |
 | **Approach** | Role-based crews | Conversations | State machines | Handoffs | Workflows |
 | **Multi-agent** | ✅ Native | ✅ Native | ✅ Native | ✅ Native | ✅ Native |
 | **MCP Support** | ✅ | ⚠️ Partial | ✅ | ✅ | ✅ |
@@ -31,12 +41,13 @@
 ```
 Need it running in 1 hour?           → OpenAI Agents SDK or CrewAI
 Building for production scale?       → LangGraph
-Research or complex reasoning?       → AutoGen
+Research or complex reasoning?       → LangGraph (AutoGen is now maintenance-mode)
 TypeScript / Node.js team?           → Mastra
 Role-based agent teams?              → CrewAI
 Need full control over state?        → LangGraph
 Want the simplest possible API?      → OpenAI Agents SDK
 Enterprise with existing LangChain?  → LangGraph
+Microsoft / Semantic Kernel shop?    → Microsoft Agent Framework 1.0
 ```
 
 ---
@@ -200,4 +211,4 @@ Framework missing or info outdated? Open a PR. Keep it factual — no marketing 
 
 ---
 
-*Last updated: 2026-05-16*
+*Last updated: 2026-10-29*

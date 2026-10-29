@@ -61,7 +61,7 @@ See the full architecture in [The Agentic Stack](../the-agentic-stack/).
 |---|---|---|
 | **Cost** | Free | Pay per token |
 | **Privacy** | 100% local | Data sent to OpenAI |
-| **Quality** | Good (8B model) | Best (GPT-4o) |
+| **Quality** | Good (8B model) | Best (frontier model) |
 | **Speed** | Depends on hardware | Fast |
 | **Setup** | `brew install ollama` | Need API key |
 | **Best for** | Learning, privacy, offline | Production, complex tasks |
