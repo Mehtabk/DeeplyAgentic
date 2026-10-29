@@ -1,7 +1,15 @@
 # ADR-004: Why Claude Fable 5 for Long-Running Agentic Tasks
 
 ## Status
-Accepted
+Accepted (June 2026) — **model names are point-in-time**
+
+> **Note (Oct 2026):** This ADR is a *dated decision record*. The specific models
+> named below (Fable 5, Opus 4.8, GPT-5.5, Gemini 3.1 Pro) reflect the June 2026
+> frontier and have since been superseded. The *reasoning* — route long autonomous
+> tasks to a top-tier model, keep a cheaper fallback, let cost-routing split the
+> work — still holds. For the current lineup see
+> [`comparisons/model-snapshot-2026-10.md`](../comparisons/model-snapshot-2026-10.md),
+> and treat the model as a swappable config value (see the Lessons doc).
 
 ## Context
 Our multi-agent pipeline (Planner → Executor → Validator) needs a model for tasks that run autonomously for hours — codebase migrations, multi-file refactors, research synthesis. Requirements:

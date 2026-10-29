@@ -26,6 +26,8 @@
 
 - **[ADR-005: Keyless deploy with pipeline-bound identity](./agent-decisions/005-keyless-deploy-pipeline-identity.md)** — why hosted agents should authenticate as a short-lived pipeline identity, not a runner-held API key. Validated on AWS Bedrock AgentCore *and* Azure AI Foundry.
 - **[ADR-006: Grounding is a tool-design choice; safety is a gate, not a prompt](./agent-decisions/006-grounding-is-tool-design-safety-is-a-gate.md)** — two failure modes (hallucination, prompt injection) reframed as architecture decisions, proven deterministically on two stacks.
+- **[Lessons from Building Production Agents](./agent-decisions/lessons-building-production-agents.md)** — five field lessons that held identically on AWS and Azure: interfaces over implementations, tool-metadata as the control plane, grounding, gated safety, keyless identity.
+- **[Frontier Model Snapshot — Oct 2026](./comparisons/model-snapshot-2026-10.md)** — a *dated* model comparison, honest that it ages fast; the durable takeaway is model-agnostic architecture.
 
 ---
 

@@ -10,7 +10,7 @@ Running every agent task through your most capable model is expensive and slow. 
 - Code generation → mid-tier model
 - Multi-hour autonomous work → frontier model
 
-Without routing, you're paying Fable 5 prices for tasks Haiku could handle.
+Without routing, you're paying frontier-model prices for tasks a small, cheap model could handle.
 
 ## The Pattern
 
@@ -23,13 +23,17 @@ Without routing, you're paying Fable 5 prices for tasks Haiku could handle.
           ▼              ▼              ▼
     ┌──────────┐  ┌──────────────┐  ┌──────────┐
     │  Tier 1  │  │   Tier 2     │  │  Tier 3  │
-    │  Haiku   │  │  Opus 4.8    │  │ Fable 5  │
-    │  $0.25/M │  │  $3/M input  │  │ $10/M    │
+    │  Small   │  │  Mid-tier    │  │ Frontier │
+    │  cheap   │  │  frontier    │  │  flagship│
     └──────────┘  └──────────────┘  └──────────┘
      Simple Q&A    Code gen, review   Multi-hour
      Summaries     Analysis           Migrations
      Formatting    Planning           Research
 ```
+
+> Map the three tiers to whatever the current frontier is — the tier *roles* are
+> stable, the model names are not. See `comparisons/model-snapshot-2026-10.md` for a
+> dated example lineup.
 
 ## Routing Criteria
 
@@ -45,16 +49,16 @@ Without routing, you're paying Fable 5 prices for tasks Haiku could handle.
 
 ```python
 def route_task(task: Task) -> str:
-    """Route to cheapest capable model."""
-    
+    """Route to cheapest capable model. Map TIER_* to current models in config."""
+
     if task.estimated_steps <= 3 and task.context_tokens < 10_000:
-        return "claude-haiku"
-    
+        return TIER_1_SMALL      # e.g. a small/cheap model
+
     if task.estimated_steps <= 15 and task.context_tokens < 100_000:
-        return "claude-opus-4.8"
-    
+        return TIER_2_MID        # e.g. a mid-tier frontier model
+
     # Complex, long-running, or high-risk
-    return "claude-fable-5"
+    return TIER_3_FRONTIER       # e.g. the current flagship
 ```
 
 ## Fallback Strategy
@@ -71,15 +75,16 @@ Based on a typical week running our Planner → Executor → Validator pipeline:
 
 | Without routing | With routing | Savings |
 |-----------------|--------------|---------|
-| All Fable 5: ~$84/week | Mixed: ~$23/week | **73% reduction** |
+| All-frontier: ~$84/week | Mixed tiers: ~$23/week | **73% reduction** |
 
 Most tasks are Tier 1 or 2. Frontier intelligence is only needed ~15% of the time.
+*(Illustrative figures from a Planner → Executor → Validator pipeline; your numbers depend on current model pricing.)*
 
 ## When NOT to Route
 
 - Safety-critical tasks → always use the most capable model
 - Tasks where retrying is more expensive than overpaying upfront
-- When latency matters more than cost (fast mode on Opus 4.8 is 2.5x faster)
+- When latency matters more than cost (a mid-tier model's fast mode can be meaningfully quicker)
 
 ## Related
 
