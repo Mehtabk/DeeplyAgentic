@@ -36,6 +36,24 @@
 
 ---
 
+### Also on the shortlist: Strands Agents (AWS)
+
+Not in the grid above because it takes a different stance worth calling out on its own.
+
+**[Strands Agents](https://github.com/strands-agents)** — AWS's open-source SDK (Apache 2.0,
+Python + TypeScript), **model-driven**: you give the model a prompt and tools and let it plan
+its own reasoning loop, instead of wiring an explicit graph or crew. Model-agnostic (Bedrock
+by default, runs anywhere — laptop, container, Lambda, EC2). The **Strands *harness*** (Sept 2026)
+ships a fully assembled agent with benchmarked defaults for prompt, tools, memory, sessions and
+context — idea to production in one import.
+
+- **Pick it when:** you want the model to own the control flow (minimal scaffolding), you're
+  AWS/Bedrock-leaning, or you want a batteries-included harness rather than building the loop.
+- **Trade-off vs LangGraph:** LangGraph gives you deterministic state-machine control; Strands
+  deliberately hands control to the model. Choose by how much explicit control flow you want to own.
+
+---
+
 ## When to Use What
 
 ```
@@ -45,6 +63,7 @@ Research or complex reasoning?       → LangGraph (AutoGen is now maintenance-m
 TypeScript / Node.js team?           → Mastra
 Role-based agent teams?              → CrewAI
 Need full control over state?        → LangGraph
+Want the model to own the loop?      → Strands Agents
 Want the simplest possible API?      → OpenAI Agents SDK
 Enterprise with existing LangChain?  → LangGraph
 Microsoft / Semantic Kernel shop?    → Microsoft Agent Framework 1.0

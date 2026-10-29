@@ -38,6 +38,7 @@ Updated periodically — see dates. Star this repo to follow along.
 | [Mirage](https://github.com/strukto-ai/mirage) | — | Virtual filesystem mounting S3, Drive, Slack, Gmail, GitHub, Notion, Postgres — agents use bash commands, snapshot/rollback workspaces |
 | [Obsidian Second Brain](https://github.com/eugeniughelbur/obsidian-second-brain) | 1.5k | Writable agent memory via Obsidian — 43 commands, mutation over accumulation, works across Claude Code, Codex, Gemini, OpenCode |
 | [Deep Agents](https://github.com/langchain-ai/deep-agents) | — | LangChain's open-source Claude Code alternative — any LLM, sub-agents, persistent memory, checkpointing, MCP support |
+| [Strands Agents](https://github.com/strands-agents) | — | AWS's open-source agent SDK (Apache 2.0, Python + TS) — model-driven: the LLM owns the reasoning loop. Model-agnostic, runs anywhere (Lambda/Fargate/AgentCore); the Strands *harness* ships production-ready defaults |
 | [Hermes Agent](https://github.com/nesquena/hermes-webui) | — | Persistent AI assistant with memory across sessions — web + CLI + 10 messaging platforms, scheduled offline jobs |
 | [Second-Me](https://github.com/mindverse/Second-Me) | 10k+ | Build your AI clone — trains on your memories, runs fully offline, deploys to decentralized networks |
 | [CodeGraph](https://github.com/optave/ops-codegraph-tool) | 50+ | MCP server that pre-indexes codebases into a knowledge graph — cuts tool calls by 92%, supports 11+ languages |
